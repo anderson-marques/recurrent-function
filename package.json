@@ -1,0 +1,17 @@
+{
+  "name": "recurrent-lambda",
+  "version": "1.0.0",
+  "description": "Recurrent lambda",
+  "main": "index.js",
+  "scripts": {
+    "package": "sam package --template-file ./sam.yaml --output-template-file ./packaged.yaml --s3-bucket recurrent-function-bucket",
+    "deploy": "sam deploy --template-file ./packaged.yaml --stack-name recurrent-lambda-stack --capabilities CAPABILITY_IAM",
+    "logs": "sam logs --name RecurrentFunction --stack-name recurrent-lambda-stack --tail"
+  },
+  "dependencies": {},
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Anderson Carvalho",
+    "email": "anderson.mo.carvalho@gmail.com"
+  }
+}
